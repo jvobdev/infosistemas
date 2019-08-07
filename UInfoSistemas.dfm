@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Cadastro de cliente'
-  ClientHeight = 526
+  ClientHeight = 548
   ClientWidth = 867
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -27,16 +27,15 @@ object Form1: TForm1
   end
   object pnGrid: TPanel
     Left = 0
-    Top = 272
+    Top = 290
     Width = 867
-    Height = 254
-    Align = alBottom
+    Height = 196
     TabOrder = 1
     object gdCliente: TDBGrid
       Left = 1
       Top = 1
       Width = 865
-      Height = 252
+      Height = 194
       Align = alClient
       DataSource = dsCliente
       TabOrder = 0
@@ -146,19 +145,20 @@ object Form1: TForm1
     Left = 0
     Top = 25
     Width = 867
-    Height = 247
-    Align = alClient
+    Height = 264
     TabOrder = 2
     object pgCadastro: TPageControl
       Left = 1
       Top = 1
       Width = 865
-      Height = 245
+      Height = 262
       ActivePage = tabEndereco
       Align = alClient
       TabOrder = 0
+      ExplicitHeight = 245
       object tabDados: TTabSheet
         Caption = 'Dados pessoais'
+        ExplicitHeight = 217
         object lblId: TLabel
           Left = 8
           Top = 8
@@ -267,6 +267,7 @@ object Form1: TForm1
       object tabEndereco: TTabSheet
         Caption = 'Endere'#231'o'
         ImageIndex = 1
+        ExplicitHeight = 217
         object lblCEP: TLabel
           Left = 3
           Top = 8
@@ -416,32 +417,49 @@ object Form1: TForm1
           TabOrder = 8
           OnClick = btnBuscarClick
         end
-        object Panel1: TPanel
-          Left = 720
-          Top = 168
-          Width = 137
-          Height = 49
-          BorderStyle = bsSingle
-          TabOrder = 9
-          object btnEnviaEmail: TButton
-            Left = 8
-            Top = 10
-            Width = 115
-            Height = 25
-            Caption = 'Enviar E-mail'
-            TabOrder = 0
-            OnClick = btnEnviaEmailClick
-          end
-        end
-        object Button1: TButton
-          Left = 592
-          Top = 72
-          Width = 75
-          Height = 25
-          Caption = 'Gravar'
-          TabOrder = 10
-          OnClick = Button1Click
-        end
+      end
+    end
+  end
+  object pnBottons: TPanel
+    Left = 0
+    Top = 487
+    Width = 867
+    Height = 61
+    Align = alBottom
+    TabOrder = 3
+    ExplicitTop = 488
+    object Panel2: TPanel
+      Left = 574
+      Top = 6
+      Width = 137
+      Height = 49
+      BorderStyle = bsSingle
+      TabOrder = 0
+      object btnGravar: TButton
+        Left = 8
+        Top = 10
+        Width = 115
+        Height = 25
+        Caption = 'Gravar'
+        TabOrder = 0
+        OnClick = btnGravarClick
+      end
+    end
+    object Panel1: TPanel
+      Left = 720
+      Top = 6
+      Width = 137
+      Height = 49
+      BorderStyle = bsSingle
+      TabOrder = 1
+      object btnEnviaEmail: TButton
+        Left = 8
+        Top = 10
+        Width = 115
+        Height = 25
+        Caption = 'Enviar E-mail'
+        TabOrder = 0
+        OnClick = btnEnviaEmailClick
       end
     end
   end

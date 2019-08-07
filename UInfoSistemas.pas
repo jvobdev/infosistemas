@@ -74,15 +74,17 @@ type
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
     btnBuscar: TButton;
+    pnBottons: TPanel;
+    Panel2: TPanel;
+    btnGravar: TButton;
     Panel1: TPanel;
     btnEnviaEmail: TButton;
-    Button1: TButton;
     procedure btnBuscarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure tabClienteBeforePost(DataSet: TDataSet);
     procedure btnEnviaEmailClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure Button1Click(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
     procedure tabClienteNewRecord(DataSet: TDataSet);
   private
     { Private declarations }
@@ -144,7 +146,7 @@ begin
   aRetorno := nil;
   aRetorno.Free;
 end;
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.btnGravarClick(Sender: TObject);
 begin
   if not (tabCliente.State in [dsEdit, dsInsert]) then tabCliente.Edit;
   tabCliente.Post;
